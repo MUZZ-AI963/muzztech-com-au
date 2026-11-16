@@ -1,0 +1,5 @@
+Contact: mailto:security@muzztech.com.au
+Expires: 2027-10-01T00:00:00.000Z
+Preferred-Languages: en
+Policy: https://muzztech.com.au/security
+Canonical: https://muzztech.com.au/.well-known/security.txt

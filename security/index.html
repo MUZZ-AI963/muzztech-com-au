@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MUZZ Vulnerability Disclosure Policy — MUZZ AI</title>
+<meta name="description" content="How to report a security vulnerability in MUZZ AI PTY LTD systems.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Sora:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0B1210;
+    --fog:#E8EEE9;
+    --mist:#C5D0C8;
+    --oxide:#C45C26;
+    --oxide-deep:#9A4519;
+    --slate:#1A2420;
+    --muted:#6B7870;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--fog);
+    color:var(--ink);
+    font-family:'Sora', system-ui, sans-serif;
+    font-weight:300;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;}
+
+  .top{
+    background:var(--ink);
+    color:var(--fog);
+    padding:clamp(1.25rem,3vw,1.75rem) clamp(1.5rem,4vw,2rem);
+  }
+  .top-inner{
+    max-width:720px;
+    margin:0 auto;
+  }
+  .brand{
+    font-family:'Bricolage Grotesque', sans-serif;
+    font-weight:700;
+    font-size:1.6rem;
+    letter-spacing:-0.03em;
+    text-decoration:none;
+  }
+
+  main{
+    background:var(--fog);
+  }
+  .band{
+    max-width:720px;
+    margin:0 auto;
+    padding:clamp(2.5rem, 7vh, 4.5rem) clamp(1.5rem, 4vw, 2rem);
+  }
+  .band + .band{
+    border-top:1px solid var(--mist);
+  }
+  .eyebrow{
+    font-family:'Bricolage Grotesque', sans-serif;
+    font-size:0.72rem;
+    font-weight:500;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    color:var(--oxide);
+    margin:0 0 0.85rem;
+  }
+  h1{
+    font-family:'Bricolage Grotesque', sans-serif;
+    font-weight:500;
+    font-size:clamp(1.85rem, 4.5vw, 2.6rem);
+    line-height:1.15;
+    letter-spacing:-0.02em;
+    margin:0;
+  }
+  .band h2{
+    font-family:'Bricolage Grotesque', sans-serif;
+    font-weight:500;
+    font-size:clamp(1.35rem, 3vw, 1.7rem);
+    line-height:1.2;
+    letter-spacing:-0.02em;
+    margin:0 0 1rem;
+  }
+  .band p,
+  .band li{
+    color:var(--slate);
+    font-size:1.02rem;
+    max-width:60ch;
+  }
+  .band p{margin:0 0 0.9rem;}
+  .band ul{margin:0 0 0.9rem; padding-left:1.25rem;}
+  .band li{margin:0 0 0.4rem;}
+  .band p:last-child,
+  .band ul:last-child{margin-bottom:0;}
+  .band strong{font-weight:500; color:var(--ink);}
+  .band a{
+    text-decoration:none;
+    border-bottom:1px solid var(--oxide);
+  }
+  .band a:hover{border-color:var(--ink);}
+
+  .line{
+    display:block;
+    width:3rem;
+    height:2px;
+    background:var(--oxide);
+    margin:0 0 1.5rem;
+  }
+
+  footer{
+    background:var(--ink);
+    color:var(--mist);
+    padding:clamp(2.5rem,6vh,4rem) clamp(1.5rem,4vw,2rem);
+  }
+  .foot{
+    max-width:720px;
+    margin:0 auto;
+  }
+  .foot a{
+    color:var(--fog);
+    text-decoration:none;
+    border-bottom:1px solid var(--oxide);
+  }
+  .foot a:hover{border-color:var(--fog);}
+  .legal{
+    font-size:0.75rem;
+    opacity:0.7;
+    margin:1.75rem 0 0;
+  }
+</style>
+</head>
+<body>
+  <header class="top">
+    <div class="top-inner">
+      <a class="brand" href="/">MUZZ</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="band">
+      <span class="line" aria-hidden="true"></span>
+      <p class="eyebrow">Security</p>
+      <h1>MUZZ Vulnerability Disclosure Policy</h1>
+    </section>
+
+    <section class="band">
+      <h2>Reporting a security issue</h2>
+      <p>
+        MUZZ AI PTY LTD welcomes reports from security researchers and members of the public who believe they have found a security vulnerability in our systems. We take every report seriously and appreciate the effort it takes to report responsibly.
+      </p>
+      <p><strong>Email:</strong> <a href="mailto:security@muzztech.com.au">security@muzztech.com.au</a></p>
+      <p>Please include:</p>
+      <ul>
+        <li>A description of the issue and its potential impact.</li>
+        <li>The steps needed to reproduce it, including any URLs, requests or screenshots.</li>
+        <li>Your name or handle, if you would like to be credited.</li>
+      </ul>
+      <p>Please do not include real personal data belonging to other people in your report.</p>
+    </section>
+
+    <section class="band">
+      <h2>Scope</h2>
+      <p>This policy covers:</p>
+      <ul>
+        <li>The muzztech.com.au website and its subdomains.</li>
+        <li>Public-facing MUZZ services and products that we operate.</li>
+      </ul>
+      <p>This policy does not cover:</p>
+      <ul>
+        <li>Third-party services we use, such as our domain registrar, hosting or cloud providers. Please report issues in those services to the provider directly.</li>
+        <li>Denial-of-service testing, or any testing that degrades our services for other users.</li>
+        <li>Social engineering, phishing or physical attacks against our staff, contractors or premises.</li>
+        <li>Spam, or reports generated by automated scanners without a demonstrated security impact.</li>
+      </ul>
+    </section>
+
+    <section class="band">
+      <h2>What we ask of you</h2>
+      <ul>
+        <li>Make a good-faith effort to avoid privacy violations, data destruction and service disruption.</li>
+        <li>Only access the minimum data needed to demonstrate the issue, and stop as soon as you have confirmed it.</li>
+        <li>Do not keep, share or use any data you come across. Delete it once you have reported the issue.</li>
+        <li>Give us reasonable time to fix the issue before telling anyone else. We ask for 90 days from your report, and we will work with you if more or less time is appropriate.</li>
+        <li>Do not demand payment or make threats in connection with a report.</li>
+      </ul>
+    </section>
+
+    <section class="band">
+      <h2>What you can expect from us</h2>
+      <ul>
+        <li>We will acknowledge your report within 5 business days.</li>
+        <li>We will keep you informed as we investigate and fix the issue.</li>
+        <li>We will let you know when the issue is resolved.</li>
+        <li>With your permission, we will credit you publicly once the issue is fixed.</li>
+      </ul>
+      <p>We do not currently run a paid bug bounty program.</p>
+    </section>
+
+    <section class="band">
+      <h2>Good-faith research</h2>
+      <p>
+        If you follow this policy and act in good faith, we will not pursue or support legal action against you for your research, and we will treat your report as authorised in accordance with this policy. This does not override the law or the rights of third parties. If you are unsure whether something is within scope, please ask us first at <a href="mailto:security@muzztech.com.au">security@muzztech.com.au</a>.
+      </p>
+      <p><em>Last updated: October 2026</em></p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="foot">
+      <a href="/">muzztech.com.au</a>
+      <p class="legal">© 2026 MUZZ AI PTY LTD. ACN 701 483 758.</p>
+    </div>
+  </footer>
+</body>
+</html>
