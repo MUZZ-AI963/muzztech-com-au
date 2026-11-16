@@ -1,17 +1,25 @@
-# Point muzztech.com.au at GitHub Pages
+# Make https://muzztech.com.au/ work
 
-Until DNS moves, use: **https://muzz-ai963.github.io/muzztech-com-au/**
+Mail is already on Proton (keep MX). Only change **web** records.
 
-At your registrar (nameserver.net.au DNS):
+At your DNS panel for **muzztech.com.au** (nameserver.net.au):
 
-1. Remove Netlify records (A → 75.2.60.5 / 99.83.231.61, and `www` CNAME → `*.netlify.app`).
-2. Apex `muzztech.com.au` — four A records:
-   - 185.199.108.153
-   - 185.199.109.153
-   - 185.199.110.153
-   - 185.199.111.153
-3. `www` — CNAME to `muzz-ai963.github.io`
-4. Tell Cursor: **“add CNAME for muzztech.com.au”** — we put `CNAME` file back and turn on HTTPS in Pages.
-5. Wait for DNS (often minutes, sometimes up to 48h). Hard refresh.
+## Delete
+- Any **A** records pointing at Netlify (`75.2.60.5`, `99.83.231.61`, or similar)
+- **www** CNAME → `glistening-faun-43ece2.netlify.app` (or any `*.netlify.app`)
 
-Mail (murray@muzztech.com.au) stays on your mail host — do not delete MX records.
+## Add
+| Host | Type | Value |
+|------|------|--------|
+| `@` or blank (apex) | A | `185.199.108.153` |
+| `@` | A | `185.199.109.153` |
+| `@` | A | `185.199.110.153` |
+| `@` | A | `185.199.111.153` |
+| `www` | CNAME | `muzz-ai963.github.io` |
+
+## Do not touch
+- **MX** → `mail.protonmail.ch` / `mailsec.protonmail.ch`
+- Any Proton **TXT** (SPF/DKIM/verification)
+
+Save → wait a few minutes → open https://muzztech.com.au/  
+Then say **“check muzztech DNS”** and Cursor will verify HTTPS.
