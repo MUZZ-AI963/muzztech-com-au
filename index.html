@@ -380,22 +380,26 @@
     color:#BCC7D8; max-width:42rem; margin:0 0 1.75rem; font-size:0.98rem;
   }
   .logo-row{
-    display:flex; flex-wrap:wrap; align-items:center; gap:1.25rem 2.25rem;
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(9.5rem, max-content));
+    align-items:center;
+    gap:1.35rem 2rem;
     list-style:none; margin:0; padding:0;
   }
-  .logo-row li{min-width:0;}
+  .logo-row li{min-width:0; max-width:100%;}
   .logo-row a{
-    display:block; text-decoration:none;
+    display:inline-flex; align-items:center;
+    text-decoration:none;
     opacity:0.92; transition:opacity 0.2s ease, transform 0.2s ease;
   }
   .logo-row a:hover{opacity:1; transform:translateY(-1px);}
   .logo-row img{
-    display:block; height:auto; width:auto;
-    max-height:3.4rem; max-width:min(220px, 42vw);
+    display:block; height:3.2rem; width:auto;
+    max-width:min(220px, 100%);
     object-fit:contain;
   }
-  .logo-row .logo-au img{max-height:4.2rem; max-width:min(260px, 72vw);}
-  .logo-row .logo-sc img{max-height:3.6rem; max-width:min(200px, 55vw);}
+  .logo-row .logo-au img{height:3.8rem; max-width:min(260px, 100%);}
+  .logo-row .logo-sc img{height:3.4rem; max-width:min(200px, 100%);}
   .membership-note{
     margin:1.35rem 0 0; font-size:0.78rem; color:var(--dim); max-width:48rem; line-height:1.45;
   }
