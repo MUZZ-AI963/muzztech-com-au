@@ -31,9 +31,16 @@
   "url": "https://muzztech.com.au/",
   "logo": "https://muzztech.com.au/favicon.svg",
   "email": "craig@muzztech.com.au",
-  "contactPoint": { "@type": "ContactPoint", "contactType": "primary contact", "name": "Craig Leach, Director", "email": "craig@muzztech.com.au", "areaServed": "AU" },
+  "founder": { "@type": "Person", "name": "Murray Clode", "email": "murray@muzztech.com.au", "jobTitle": "Founder" },
+  "contactPoint": [
+    { "@type": "ContactPoint", "contactType": "founder", "name": "Murray Clode, Founder", "email": "murray@muzztech.com.au", "areaServed": "AU" },
+    { "@type": "ContactPoint", "contactType": "primary contact", "name": "Craig Leach, Director", "email": "craig@muzztech.com.au", "areaServed": "AU" }
+  ],
   "identifier": { "@type": "PropertyValue", "propertyID": "ACN", "value": "701 483 758" },
   "address": { "@type": "PostalAddress", "addressRegion": "QLD", "addressCountry": "AU" },
+  "memberOf": [
+    { "@type": "Organization", "name": "NVIDIA Inception", "url": "https://www.nvidia.com/en-au/startups/" }
+  ],
   "sameAs": ["https://x.com/Muzztechai"]
 }
 </script>
@@ -361,6 +368,36 @@
   .au-grid{display:grid; grid-template-columns:minmax(0,1.3fr) minmax(0,0.7fr); gap:2rem; align-items:center;}
   .au-map{width:100%; max-width:300px; justify-self:end;}
 
+  /* ——— Membership / affiliation logos ——— */
+  .membership{
+    border-top:1px solid var(--rule);
+    padding-block:clamp(2.5rem, 6vh, 3.75rem);
+    background:linear-gradient(180deg, #070C16 0%, var(--night) 100%);
+  }
+  .membership .eyebrow{margin-bottom:0.75rem;}
+  .membership-lead{
+    color:#BCC7D8; max-width:42rem; margin:0 0 1.75rem; font-size:0.98rem;
+  }
+  .logo-row{
+    display:flex; flex-wrap:wrap; align-items:center; gap:1.25rem 2.25rem;
+    list-style:none; margin:0; padding:0;
+  }
+  .logo-row li{min-width:0;}
+  .logo-row a{
+    display:block; text-decoration:none;
+    opacity:0.92; transition:opacity 0.2s ease, transform 0.2s ease;
+  }
+  .logo-row a:hover{opacity:1; transform:translateY(-1px);}
+  .logo-row img{
+    display:block; height:auto; width:auto;
+    max-height:3.4rem; max-width:min(220px, 42vw);
+    object-fit:contain;
+  }
+  .logo-row .logo-au img{max-height:4.2rem; max-width:min(260px, 72vw);}
+  .membership-note{
+    margin:1.35rem 0 0; font-size:0.78rem; color:var(--dim); max-width:48rem; line-height:1.45;
+  }
+
   /* ——— AML (kept separate from the Kernel) ——— */
   .aml{background:var(--deep);}
   .aml .h2{font-size:clamp(1.4rem, 2.6vw, 2rem);}
@@ -428,6 +465,7 @@
     .mornings, .split, .au-grid, .people, .foot{grid-template-columns:minmax(0,1fr);}
     .au-map{justify-self:start; max-width:220px;}
     .hero-shade{background:linear-gradient(180deg, rgba(6,10,18,0.25) 0%, rgba(6,10,18,0.8) 50%, var(--night) 100%);}
+    .logo-row{gap:1.1rem 1.5rem;}
   }
   @media (max-width:560px){
     .mark-strap, .mark-rule{display:none;}
@@ -590,7 +628,7 @@
         <div>
           <p class="eyebrow rv">Australian and independent</p>
           <h2 class="h2 rv">Australian owned. <span class="blue">Built in Queensland.</span></h2>
-          <p class="intro rv">MUZZ AI Pty Ltd is wholly Australian owned and operated, with development, engineering and commercialisation in Australia. It is not owned or controlled by any overseas company or government.</p>
+          <p class="intro rv">MUZZ AI Pty Ltd is wholly Australian owned and operated — founded by Murray Clode in Queensland — with development, engineering and commercialisation in Australia. It is not owned or controlled by any overseas company or government.</p>
         </div>
         <svg class="au-map rv" viewBox="0 0 200 180" role="img" aria-label="Map of Australia with Queensland highlighted">
           <path d="M18 92 L30 70 L52 60 L66 46 L84 48 L92 36 L106 42 L114 30 L124 34 L124 70 L124 112 L104 126 L92 138 L74 132 L58 122 L42 128 L24 120 Z" fill="#0F1E36" stroke="#2B4468" stroke-width="1.2" stroke-linejoin="round"/>
@@ -601,6 +639,32 @@
           <circle cx="174" cy="108" r="9" fill="none" stroke="#3DA9FF" stroke-opacity="0.45"/>
           <text x="150" y="80" fill="#E8EEF7" font-family="IBM Plex Mono, monospace" font-size="8" text-anchor="middle">QLD</text>
         </svg>
+      </div>
+    </section>
+
+    <section class="membership" id="membership" aria-labelledby="membership-heading">
+      <div class="wrap">
+        <p class="eyebrow rv">Membership &amp; affiliation</p>
+        <h2 class="h2 rv" id="membership-heading" style="max-width:24ch; font-size:clamp(1.35rem, 2.4vw, 1.9rem);">NVIDIA Inception. <span class="blue">Australian home-grown AI.</span></h2>
+        <p class="membership-lead rv">MUZZ is a member of NVIDIA Inception and built as Australian home-grown AI — founded in Queensland, listed with the National AI Centre’s home-grown capability directory where applicable.</p>
+        <ul class="logo-row rv">
+          <li>
+            <a href="https://www.nvidia.com/en-au/startups/" rel="noopener" aria-label="NVIDIA Inception program for startups">
+              <img src="/brand/nvidia-inception-program-badge-on-dark.svg" width="220" height="95" alt="NVIDIA Inception Program member badge">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.nvidia.com/" rel="noopener" aria-label="NVIDIA">
+              <img src="/brand/nvidia-logo-on-dark.svg" width="160" height="30" alt="NVIDIA logo">
+            </a>
+          </li>
+          <li class="logo-au">
+            <a href="https://www.ai.gov.au/" rel="noopener" aria-label="Australian Home Grown AI — National AI Centre">
+              <img src="/brand/australian-home-grown-ai.svg" width="260" height="90" alt="Australian Home Grown AI — National AI Centre directory">
+            </a>
+          </li>
+        </ul>
+        <p class="membership-note rv">NVIDIA Inception membership is not an NVIDIA endorsement of MUZZ products. The Australian Home Grown AI lockup signals Australian-founded capability and National AI Centre directory affiliation; it is not a Commonwealth Coat of Arms and does not imply Australian Government endorsement.</p>
       </div>
     </section>
 
@@ -620,16 +684,16 @@
         <p class="intro rv">Talk to us about an independent evaluation, or a controlled pilot in your environment.</p>
         <div class="people">
           <div class="person primary rv">
+            <p class="person-role">Founder</p>
+            <p class="person-name">Murray Clode</p>
+            <p class="person-title">Founder, MUZZ AI PTY LTD</p>
+            <a href="mailto:murray@muzztech.com.au?subject=MUZZ%20%E2%80%94%20founder">murray@muzztech.com.au</a>
+          </div>
+          <div class="person rv">
             <p class="person-role">Primary contact</p>
             <p class="person-name">Craig Leach</p>
             <p class="person-title">Director</p>
             <a href="mailto:craig@muzztech.com.au?subject=MUZZ%20%E2%80%94%20evaluation%20or%20pilot%20enquiry">craig@muzztech.com.au</a>
-          </div>
-          <div class="person rv">
-            <p class="person-role">Also</p>
-            <p class="person-name">Murray Clode</p>
-            <p class="person-title">MUZZ AI PTY LTD</p>
-            <a href="mailto:murray@muzztech.com.au">murray@muzztech.com.au</a>
           </div>
         </div>
       </div>
@@ -646,9 +710,9 @@
         </a>
       </div>
       <div>
-        <p>MUZZ AI is a member of <a href="https://www.nvidia.com/en-au/startups/" rel="noopener">NVIDIA Inception</a>, a program for startups. Membership is not an NVIDIA endorsement of MUZZ products.</p>
+        <p>Founded by <strong style="color:var(--text);font-weight:500">Murray Clode</strong>. Member of <a href="https://www.nvidia.com/en-au/startups/" rel="noopener">NVIDIA Inception</a>. Australian home-grown AI — see <a href="#membership">membership</a>.</p>
         <p><a href="https://x.com/Muzztechai" rel="noopener">@Muzztechai on X</a></p>
-        <p class="legal">© 2026 MUZZ AI PTY LTD. ACN 701 483 758. Architecture patent pending. NVIDIA and NVIDIA Inception are trademarks of NVIDIA Corporation.</p>
+        <p class="legal">© 2026 MUZZ AI PTY LTD. ACN 701 483 758. Architecture patent pending. NVIDIA and NVIDIA Inception are trademarks of NVIDIA Corporation. Membership and directory affiliation are not product endorsements.</p>
       </div>
     </div>
   </footer>
