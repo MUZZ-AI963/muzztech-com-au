@@ -8,12 +8,12 @@
 <link rel="canonical" href="https://muzztech.com.au/">
 <meta name="theme-color" content="#060A12">
 <meta name="color-scheme" content="dark">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/muzz-x-avatar.svg" type="image/svg+xml">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="MUZZ AI">
-<meta property="og:title" content="MUZZ — Contain the threat. Keep the bank operating.">
-<meta property="og:description" content="A cooperation boundary between AI systems. Connect the intelligence without connecting the judgement.">
+<meta property="og:title" content="MUZZ AI — Controlled cooperation for a safer AI world">
+<meta property="og:description" content="Useful information passes. An attempt to dictate another system's decision is refused and kept for a named person to review.">
 <meta property="og:url" content="https://muzztech.com.au/">
 <meta property="og:image" content="https://muzztech.com.au/og.jpg">
 <meta property="og:image:width" content="1200">
@@ -29,19 +29,11 @@
   "name": "MUZZ AI PTY LTD",
   "alternateName": "MUZZ AI",
   "url": "https://muzztech.com.au/",
-  "logo": "https://muzztech.com.au/favicon.svg",
+  "logo": "https://muzztech.com.au/muzz-x-avatar.svg",
   "email": "craig@muzztech.com.au",
-  "founder": { "@type": "Person", "name": "Murray Clode", "email": "murray@muzztech.com.au", "jobTitle": "Founder" },
-  "contactPoint": [
-    { "@type": "ContactPoint", "contactType": "founder", "name": "Murray Clode, Founder", "email": "murray@muzztech.com.au", "areaServed": "AU" },
-    { "@type": "ContactPoint", "contactType": "primary contact", "name": "Craig Leach, Director", "email": "craig@muzztech.com.au", "areaServed": "AU" }
-  ],
+  "contactPoint": { "@type": "ContactPoint", "contactType": "primary contact", "name": "Craig Leach, Director", "email": "craig@muzztech.com.au", "areaServed": "AU" },
   "identifier": { "@type": "PropertyValue", "propertyID": "ACN", "value": "701 483 758" },
   "address": { "@type": "PostalAddress", "addressRegion": "QLD", "addressCountry": "AU" },
-  "memberOf": [
-    { "@type": "Organization", "name": "NVIDIA Inception", "url": "https://www.nvidia.com/en-au/startups/" },
-    { "@type": "Organization", "name": "Stone & Chalk", "url": "https://www.stoneandchalk.com.au/" }
-  ],
   "sameAs": ["https://x.com/Muzztechai"]
 }
 </script>
@@ -107,6 +99,10 @@
   .mark{
     display:flex; align-items:center; gap:1rem;
     text-decoration:none;
+  }
+  .mark-icon{
+    width:2.1rem; height:2.1rem; display:block; flex:none;
+    border-radius:0.35rem;
   }
   .mark-word{
     font-family:var(--display);
@@ -369,41 +365,6 @@
   .au-grid{display:grid; grid-template-columns:minmax(0,1.3fr) minmax(0,0.7fr); gap:2rem; align-items:center;}
   .au-map{width:100%; max-width:300px; justify-self:end;}
 
-  /* ——— Membership / affiliation logos ——— */
-  .membership{
-    border-top:1px solid var(--rule);
-    padding-block:clamp(2.5rem, 6vh, 3.75rem);
-    background:linear-gradient(180deg, #070C16 0%, var(--night) 100%);
-  }
-  .membership .eyebrow{margin-bottom:0.75rem;}
-  .membership-lead{
-    color:#BCC7D8; max-width:42rem; margin:0 0 1.75rem; font-size:0.98rem;
-  }
-  .logo-row{
-    display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(9.5rem, max-content));
-    align-items:center;
-    gap:1.35rem 2rem;
-    list-style:none; margin:0; padding:0;
-  }
-  .logo-row li{min-width:0; max-width:100%;}
-  .logo-row a{
-    display:inline-flex; align-items:center;
-    text-decoration:none;
-    opacity:0.92; transition:opacity 0.2s ease, transform 0.2s ease;
-  }
-  .logo-row a:hover{opacity:1; transform:translateY(-1px);}
-  .logo-row img{
-    display:block; height:3.2rem; width:auto;
-    max-width:min(220px, 100%);
-    object-fit:contain;
-  }
-  .logo-row .logo-au img{height:3.8rem; max-width:min(260px, 100%);}
-  .logo-row .logo-sc img{height:3.4rem; max-width:min(200px, 100%);}
-  .membership-note{
-    margin:1.35rem 0 0; font-size:0.78rem; color:var(--dim); max-width:48rem; line-height:1.45;
-  }
-
   /* ——— AML (kept separate from the Kernel) ——— */
   .aml{background:var(--deep);}
   .aml .h2{font-size:clamp(1.4rem, 2.6vw, 2rem);}
@@ -434,6 +395,7 @@
   .person .muted{color:var(--dim);}
   .person-name{font-family:var(--display); font-weight:700; font-size:1.15rem; margin:0 0 0.2rem;}
   .person-title{color:var(--dim); font-size:0.92rem; margin:0 0 0.9rem;}
+  .person-bio{color:var(--dim); font-size:0.92rem; margin:0.85rem 0 0; max-width:42rem;}
   .person a{
     color:var(--text); text-decoration:none; word-break:break-all;
     border-bottom:1px solid var(--signal); padding-bottom:0.1rem;
@@ -471,7 +433,6 @@
     .mornings, .split, .au-grid, .people, .foot{grid-template-columns:minmax(0,1fr);}
     .au-map{justify-self:start; max-width:220px;}
     .hero-shade{background:linear-gradient(180deg, rgba(6,10,18,0.25) 0%, rgba(6,10,18,0.8) 50%, var(--night) 100%);}
-    .logo-row{gap:1.1rem 1.5rem;}
   }
   @media (max-width:560px){
     .mark-strap, .mark-rule{display:none;}
@@ -492,6 +453,7 @@
   <div class="top">
     <div class="wrap">
       <a class="mark" href="/" aria-label="MUZZ AI home">
+        <img class="mark-icon" src="/muzz-x-avatar.svg" alt="">
         <span class="mark-word">MUZZ</span>
         <span class="mark-rule" aria-hidden="true"></span>
         <span class="mark-strap">Controlled<br>cooperation for a<br>safer AI world</span>
@@ -623,7 +585,7 @@
         <dl class="stand rv">
           <div><dt>Patent</dt><dd>Australian patent pending — not granted.</dd></div>
           <div><dt>Testing</dt><dd>Internal laboratory testing on defined pathways. Not independently evaluated, not certified, not in production.</dd></div>
-          <div><dt>What we’re asking for</dt><dd>Independent evaluation, not endorsement — and a controlled pilot with an Australian bank.</dd></div>
+          <div><dt>What we’re asking for</dt><dd>Independent evaluation, not endorsement — and a controlled pilot on a machine you control. Not a live bank deployment.</dd></div>
           <div><dt>Parliament</dt><dd>Joint Select Committee inquiry into Artificial Intelligence — Submission 276.</dd></div>
         </dl>
       </div>
@@ -634,7 +596,7 @@
         <div>
           <p class="eyebrow rv">Australian and independent</p>
           <h2 class="h2 rv">Australian owned. <span class="blue">Built in Queensland.</span></h2>
-          <p class="intro rv">MUZZ AI Pty Ltd is wholly Australian owned and operated — founded by Murray Clode in Queensland — with development, engineering and commercialisation in Australia. It is not owned or controlled by any overseas company or government.</p>
+          <p class="intro rv">MUZZ AI Pty Ltd is wholly Australian owned and operated, with development, engineering and commercialisation in Australia. It is not owned or controlled by any overseas company or government.</p>
         </div>
         <svg class="au-map rv" viewBox="0 0 200 180" role="img" aria-label="Map of Australia with Queensland highlighted">
           <path d="M18 92 L30 70 L52 60 L66 46 L84 48 L92 36 L106 42 L114 30 L124 34 L124 70 L124 112 L104 126 L92 138 L74 132 L58 122 L42 128 L24 120 Z" fill="#0F1E36" stroke="#2B4468" stroke-width="1.2" stroke-linejoin="round"/>
@@ -648,43 +610,12 @@
       </div>
     </section>
 
-    <section class="membership" id="membership" aria-labelledby="membership-heading">
-      <div class="wrap">
-        <p class="eyebrow rv">Membership &amp; affiliation</p>
-        <h2 class="h2 rv" id="membership-heading" style="max-width:28ch; font-size:clamp(1.35rem, 2.4vw, 1.9rem);">NVIDIA Inception. Stone &amp; Chalk. <span class="blue">Australian home-grown AI.</span></h2>
-        <p class="membership-lead rv">MUZZ is a member of NVIDIA Inception and Stone &amp; Chalk, and built as Australian home-grown AI — founded in Queensland, listed with the National AI Centre’s home-grown capability directory where applicable.</p>
-        <ul class="logo-row rv">
-          <li>
-            <a href="https://www.nvidia.com/en-au/startups/" rel="noopener" aria-label="NVIDIA Inception program for startups">
-              <img src="/brand/nvidia-inception-program-badge-on-dark.svg" width="220" height="95" alt="NVIDIA Inception Program member badge">
-            </a>
-          </li>
-          <li>
-            <a href="https://www.nvidia.com/" rel="noopener" aria-label="NVIDIA">
-              <img src="/brand/nvidia-logo-on-dark.svg" width="160" height="30" alt="NVIDIA logo">
-            </a>
-          </li>
-          <li class="logo-sc">
-            <a href="https://www.stoneandchalk.com.au/" rel="noopener" aria-label="Stone &amp; Chalk — Australia’s startup community">
-              <img src="/brand/stone-and-chalk-on-dark.svg" width="200" height="64" alt="Stone &amp; Chalk logo">
-            </a>
-          </li>
-          <li class="logo-au">
-            <a href="https://www.ai.gov.au/" rel="noopener" aria-label="Australian Home Grown AI — National AI Centre">
-              <img src="/brand/australian-home-grown-ai.svg" width="260" height="90" alt="Australian Home Grown AI — National AI Centre directory">
-            </a>
-          </li>
-        </ul>
-        <p class="membership-note rv">NVIDIA Inception and Stone &amp; Chalk membership are not endorsements of MUZZ products. The Australian Home Grown AI lockup signals Australian-founded capability and National AI Centre directory affiliation; it is not a Commonwealth Coat of Arms and does not imply Australian Government endorsement. Stone &amp; Chalk is a trademark of Stone &amp; Chalk.</p>
-      </div>
-    </section>
-
     <section class="sec aml" id="aml">
       <div class="wrap">
         <p class="eyebrow rv">Also from MUZZ — a separate product</p>
-        <h2 class="h2 rv">MUZZ AML — quiet ledger watch.</h2>
-        <p class="rv">For Australian professional practices. Connect the books (for example Xero) and AML Watch keeps an eye on the ledger. The officer decides whether suspicion is formed and lodges with AUSTRAC. Each firm stays isolated; we do not run a common intelligence lake.</p>
-        <p class="rv">We attach behind suites that already own the customer. We do not replace your compliance software, rebuild identity checks, or lodge for you.</p>
+        <h2 class="h2 rv">MUZZ AML</h2>
+        <p class="rv">MUZZ AML is a separate product for Australian professional practices newly under AUSTRAC. Upload a payment file exported from your accounting or practice system; the desk opens explained AML, CTF and fraud cases, keeps “please rush this” pressure on record without acting on it, and has a named officer seal each decision with a tamper-evident record. Suspicion decisions and any AUSTRAC lodgement stay with your officers. It does not replace your compliance program or connect to your bank.</p>
+        <p class="rv">Each firm stays on its own machine. MUZZ does not run a common intelligence lake, rebuild identity checks, or lodge for you.</p>
       </div>
     </section>
 
@@ -695,16 +626,17 @@
         <p class="intro rv">Talk to us about an independent evaluation, or a controlled pilot in your environment.</p>
         <div class="people">
           <div class="person primary rv">
-            <p class="person-role">Founder</p>
-            <p class="person-name">Murray Clode</p>
-            <p class="person-title">Founder, MUZZ AI PTY LTD</p>
-            <a href="mailto:murray@muzztech.com.au?subject=MUZZ%20%E2%80%94%20founder">murray@muzztech.com.au</a>
-          </div>
-          <div class="person rv">
             <p class="person-role">Primary contact</p>
             <p class="person-name">Craig Leach</p>
             <p class="person-title">Director</p>
             <a href="mailto:craig@muzztech.com.au?subject=MUZZ%20%E2%80%94%20evaluation%20or%20pilot%20enquiry">craig@muzztech.com.au</a>
+          </div>
+          <div class="person rv">
+            <p class="person-role">Also</p>
+            <p class="person-name">Murray Clode</p>
+            <p class="person-title">Founder</p>
+            <a href="mailto:murray@muzztech.com.au">murray@muzztech.com.au</a>
+            <p class="person-bio">Licensed commercial pilot; Airport Safety Officer at Sydney (Kingsford Smith) Airport, 1992–1999; senior explosives technician with Rio Tinto, Dyno Nobel Asia Pacific and across the Bowen Basin. MUZZ applies the same discipline to AI: a decision that matters rests on checkable facts and a named person signs for it, whatever the pressure.</p>
           </div>
         </div>
       </div>
@@ -715,15 +647,16 @@
     <div class="wrap foot">
       <div>
         <a class="mark" href="/" aria-label="MUZZ AI home" style="border:0">
+          <img class="mark-icon" src="/muzz-x-avatar.svg" alt="">
           <span class="mark-word" style="font-size:1.25rem">MUZZ</span>
           <span class="mark-rule" aria-hidden="true"></span>
           <span class="mark-strap">MUZZ AI PTY LTD<br>100% Australian owned<br>Queensland, Australia</span>
         </a>
       </div>
       <div>
-        <p>Founded by <strong style="color:var(--text);font-weight:500">Murray Clode</strong>. Member of <a href="https://www.nvidia.com/en-au/startups/" rel="noopener">NVIDIA Inception</a> and <a href="https://www.stoneandchalk.com.au/" rel="noopener">Stone &amp; Chalk</a>. Australian home-grown AI — see <a href="#membership">membership</a>.</p>
+        <p><strong>Membership.</strong> MUZZ AI Pty Ltd is a member of <a href="https://www.nvidia.com/en-au/startups/" rel="noopener">NVIDIA Inception</a>, NVIDIA’s program for AI startups. Membership is not an endorsement of MUZZ products.</p>
         <p><a href="https://x.com/Muzztechai" rel="noopener">@Muzztechai on X</a></p>
-        <p class="legal">© 2026 MUZZ AI PTY LTD. ACN 701 483 758. Architecture patent pending. NVIDIA and NVIDIA Inception are trademarks of NVIDIA Corporation. Stone &amp; Chalk is a trademark of Stone &amp; Chalk. Membership and directory affiliation are not product endorsements.</p>
+        <p class="legal">© 2026 MUZZ AI PTY LTD. ACN 701 483 758. Architecture patent pending. NVIDIA and NVIDIA Inception are trademarks of NVIDIA Corporation.</p>
       </div>
     </div>
   </footer>
